@@ -1,0 +1,1 @@
+import React from"react";import{Box}from"@mui/material";import ProductCard from"./ProductCard";export default function ProductGrid({products,onProductClick}){return <Box sx={{display:"grid",gridTemplateColumns:{xs:"1fr 1fr",sm:"repeat(3,1fr)",md:"repeat(4,1fr)"},gap:3}}>{products.map(p=><ProductCard key={p.slug} product={p} onClick={()=>onProductClick(p)}/>)}</Box>}
