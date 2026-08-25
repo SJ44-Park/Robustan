@@ -20,7 +20,7 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
-        backgroundColor:  "#0a2b6d",
+        backgroundColor: "#0a2b6d",
         color: "#ffffff",
         py: 6,
         px: 2,
@@ -43,13 +43,27 @@ export default function Footer() {
               variant="body2"
               sx={{ mb: 2, maxWidth: 340, lineHeight: 1.6 }}
             >
-              Providing top-tier digital transformation and corporate solutions
-              across the Philippines.
+              Providing top-tier Medical Equipment Sales and Services across the
+              Philippines.
             </Typography>
             {/* 필리핀 특유의 건물/바랑가이(Barangay) 포함 주소 체계 */}
-            <Typography variant="caption" display="block" sx={{ mb: 0.5 }}>
-              <strong>Address:</strong> 24th Floor, Tech Tower, 6789 Ayala
-              Avenue, Barangay San Lorenzo, Makati City, 1226 Metro Manila,
+            <Typography
+              variant="caption"
+              display="block"
+              sx={{
+                mb: 0.5,
+                "& strong": {
+                  color: "#01a0c6",
+                  // fontWeight: "bold" 등 추가 스타일도 여기에 넣을 수 있습니다.
+                },
+              }}
+            >
+              <strong>Address:</strong> 906 South Center Tower, 2206 Market st.,
+              <br />
+              Madrigal Business Park, Alabang,
+              <br />
+              Muntinlupa City, Metro Manila
+              <br />
               Philippines
             </Typography>
 
@@ -96,13 +110,13 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/careers"
+                  href="/map"
                   color="inherit"
                   variant="body2"
                   display="block"
                   sx={{ mb: 1 }}
                 >
-                  Careers
+                  Branch Office
                 </Link>
               </li>
               <li>
@@ -237,7 +251,7 @@ export default function Footer() {
           </Grid>
         </Grid>
 
-        <Divider sx={{ my: 4 ,borderColor: '#6bb2fa' }} />
+        <Divider sx={{ my: 4, borderColor: "#6bb2fa" }} />
 
         {/* 4. 최하단 저작권 및 표준 법적 링크 */}
         <Box

@@ -7,7 +7,9 @@ Madrigal Business Park, Alabang,
 Muntinlupa City, Metro Manila
 Philippines`,
 
-    phone: " (632) 8842-6684 / (632)8 842-6054",
+    phone: ` (632) 8842-6684 / 
+    (632)8 842-6054`,
+
     Telefax: "(63)2 842-0954",
     email: "info@robustan.com",
     description: "Manila 고객 지원 및 본사 업무를 담당합니다.",
