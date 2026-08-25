@@ -12,6 +12,9 @@ import ProductPage from "./pages/ProductPage";
 
 import Product from "./pages/Product";
 import Contact from "./pages/Contact";
+
+import BranchOfficeMapPage from "./pages/BranchOfficeMapPage";
+
 import ProductDetailPage from "./pages/ProductDetailPage";
 
 import Services from "./pages/Services";
@@ -54,11 +57,7 @@ export default function App() {
 
         <Route
           path="/map"
-          element={
-            <Page>
-              <Typography variant="h4">Branch Location (오시는 길)</Typography>
-            </Page>
-          }
+          element={ <BranchOfficeMapPage/> }
         />
 
         <Route
