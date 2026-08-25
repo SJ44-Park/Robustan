@@ -73,7 +73,7 @@ export default function Header({ onSelect }) {
               onClick={() => nav("/")}
               sx={{ fontWeight: 700, letterSpacing: 3,   color: "#a3a3a3ff" }}
             >
-              ROBUSTAN 2
+              ROBUSTAN
             </Typography>
             </Box>
 

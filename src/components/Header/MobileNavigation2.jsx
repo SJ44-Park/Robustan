@@ -14,7 +14,9 @@ import { Close, ExpandLess, ExpandMore } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { business, products, company } from "../../data/data";
 
-export default function MobileNavigation({ open, onClose, onProductClick }) {
+import productData from "../../data/Productdata";
+
+export default function MobileNavigation2({ open, onClose, onProductClick }) {
   const nav = useNavigate(),
     [cats, setCats] = useState({}),
     [subs, setSubs] = useState({}),
@@ -24,6 +26,15 @@ export default function MobileNavigation({ open, onClose, onProductClick }) {
   const itemsP = subs ? products.subCategories[subs] : [];
     //  const isCategoryOpen = openCategories[subCategory];
 
+      const itemCodes = productData.map((item) => item.productCode);
+  // 2. productName만 추출하여 itemNames 배열에 담기
+  const itemNames = productData.map((item) => item.productName);
+
+  const itemPairs = productData.map(({ productCode, productName }) => ({
+    productCode,
+    productName,
+  }));
+  
   return (
     <Drawer
       anchor="left"

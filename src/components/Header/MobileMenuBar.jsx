@@ -40,12 +40,13 @@ export default function MobileMenuBar({ open, onClose, onBussinessClick }) {
           <Typography
             sx={{ fontWeight: 700, letterSpacing: 2, color: "#ffc124ff" }}
           >
-            ROBUSTAN 4
+            ROBUSTAN
           </Typography>
           <IconButton onClick={onClose} aria-label="닫기">
             <Close />
           </IconButton>
         </Box>
+
         <List>
           <Typography sx={{ px: 2.5, pt: 2, color: "#999", fontSize: 11 }}>
             COMPANY
@@ -62,6 +63,7 @@ export default function MobileMenuBar({ open, onClose, onBussinessClick }) {
             </ListItemButton>
           ))}
         </List>
+
         <Divider />
       </Box>
     </Drawer>

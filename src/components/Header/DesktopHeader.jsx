@@ -77,8 +77,8 @@ export default function DesktopHeader({ onSelect, onProductClick }) {
           height: 28, // !!psj
           minHeight: 20, // !!psj
           display: "flex",
-          // justifyContent: "flex-end",
-          justifyContent: "space-between",
+          justifyContent: "flex-end",
+          // justifyContent: "space-between",
           alignItems: "center",
           px: 6,
           borderBottom: "1px solid #d0dbffff",
@@ -86,7 +86,7 @@ export default function DesktopHeader({ onSelect, onProductClick }) {
           color: "#787878ff", // !!psj
         }}
       >
-        <Button
+        {/* <Button
           key="debug"
           sx={{
             background: "#ffe15cff",
@@ -104,7 +104,7 @@ export default function DesktopHeader({ onSelect, onProductClick }) {
           }}
         >
           debug
-        </Button>
+        </Button> */}
 
         <Stack direction="row" spacing={3}>
           {/* {company.map((x) => (
@@ -204,7 +204,7 @@ export default function DesktopHeader({ onSelect, onProductClick }) {
               height: "100%",
             }}
           >
-            ROBUSTAN 1
+            ROBUSTAN
           </Typography>
         </Box>
 
