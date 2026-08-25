@@ -2,8 +2,8 @@ const img = (id) => `/images/${id}`;
 
 const P = (name, id, sub) => ({
   name,
-  brand: "MONO STUDIO",
-  category: "BAG",
+  brand: "GE",
+  category: "Cardiology",
   subCategory: sub,
   slug: name.toLowerCase().replace(/\s+/g, "-"),
   image: img(id),

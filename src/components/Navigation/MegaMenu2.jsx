@@ -24,9 +24,9 @@ export default function MegaMenu2({
     <Box
       sx={{
         display: "block",
-        borderTop: "2px solid #82ff39ff",
+        borderTop: "2px solid rgb(103, 159, 255)",
         p: 3,
-        // background: "rgb(255, 250, 200)",
+        background: "rgb(255, 250, 200)",
         color: "rgb(14, 69, 139)",
       }}
     >
