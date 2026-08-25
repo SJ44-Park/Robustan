@@ -14,6 +14,8 @@ import Product from "./pages/Product";
 import Contact from "./pages/Contact";
 
 import BranchOfficeMapPage from "./pages/BranchOfficeMapPage";
+import BrandsPage from "./pages/BrandsPage";
+
 
 import ProductDetailPage from "./pages/ProductDetailPage";
 
@@ -61,11 +63,9 @@ export default function App() {
         />
 
         <Route
-          path="/history"
+          path="/brands"
           element={
-            <Page>
-              <Typography variant="h4">Brands & History (브랜드)</Typography>
-            </Page>
+            <BrandsPage />
           }
         />
 

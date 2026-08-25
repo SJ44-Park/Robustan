@@ -13,7 +13,7 @@ export const company = [
   { label: "HOME", path: "/" },
   { label: "COMPANY PROFILE", path: "/about" },
   { label: "BRANCH LOCATION", path: "/map" },
-  { label: "BRANDS", path: "/history" },
+  { label: "BRANDS", path: "/brands" },
   { label: "CONTACT", path: "/contact" },
 ];
 
