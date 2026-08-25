@@ -34,7 +34,9 @@ export default function MobileNavigation({ open, onClose, onProductClick }) {
     >
       <Box>
         <Box
+        
           sx={{
+          height: '56px',
             p: 2.5,
             display: "flex",
             justifyContent: "space-between",
@@ -42,10 +44,10 @@ export default function MobileNavigation({ open, onClose, onProductClick }) {
               background: "#e4ffdd",
           }}
         >
-          <Typography sx={{ fontWeight: 700, letterSpacing: 2,
-             color: "#4040db"
+          <Typography sx={{ fontWeight: 700, letterSpacing: 2, 
+             color: "#6363ea"
            }}>
-            Products
+            PRODUCTS
           </Typography>
           <IconButton onClick={onClose} aria-label="닫기">
             <Close />

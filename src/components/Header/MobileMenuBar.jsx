@@ -49,6 +49,7 @@ export default function MobileMenuBar({ open, onClose, onBussinessClick }) {
       <Box>
         <Box
           sx={{
+            //  height: '56px',
             p: 2.5,
             display: "flex",
             justifyContent: "space-between",
