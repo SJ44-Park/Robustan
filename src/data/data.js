@@ -1,5 +1,4 @@
-const img = (id) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1000&q=85`;
+const img = (id) => `/images/${id}`;
 
 const P = (name, id, sub) => ({
   name,
@@ -67,88 +66,19 @@ export const business = {
   },
 };
 
-// export const business = {
-//   products: {
-//     label: "product",
-//     color: "#33a76e",
-//     subCategories: {
-//       Cardiology: [
-//         // P("Classic Tote", "photo-1553062407-98eeb64c6a62", "Tote"),
-//         // P("Daily Tote", "photo-1594223274512-ad4803739b7c", "Tote"),
-//         // P("Soft Tote", "photo-1584917865442-de89df76afd3", "Tote"),
-//       ],
-//       Emergency: [
-//         // P("Mini Shoulder", "photo-1584917865442-de89df76afd3", "Shoulder"),
-//         // P("Classic Shoulder", "photo-1548036328-c9fa89d128fa", "Shoulder"),
-//       ],
-//       Gastrology: [
-//         // P("Classic Tote", "photo-1553062407-98eeb64c6a62", "Tote"),
-//         // P("Daily Tote", "photo-1594223274512-ad4803739b7c", "Tote"),
-//         // P("Soft Tote", "photo-1584917865442-de89df76afd3", "Tote"),
-//       ],
-//       Nutrition_Diabetic: [
-//         // P("Mini Shoulder", "photo-1584917865442-de89df76afd3", "Shoulder"),
-//         // P("Classic Shoulder", "photo-1548036328-c9fa89d128fa", "Shoulder"),
-//       ],
-//     },
-//   },
-//   Supports: {
-//     label: "Project Support",
-//      color: "#109adfff",
-//     subCategories: {
-//       New_Op_Room: [
-//         // P("Classic Sneakers", "photo-1542291026-7eec264c27ff", "Sneakers"),
-//         // P("Runner Sneakers", "photo-1460353581641-37baddab0fa2", "Sneakers"),
-//       ],
-//       Upgrade_OldSystem: [
-//         // P("Classic Sneakers", "photo-1542291026-7eec264c27ff", "Sneakers"),
-//         // P("Runner Sneakers", "photo-1460353581641-37baddab0fa2", "Sneakers"),
-//       ],
-//     },
-//   },
-//   Services: {
-//     label: "Service",
-//      color:  "#a63db7",
-//     subCategories: {
-//       Mainternance: [
-//         // P("Straight Denim", "photo-1542272604-787c3835535d", "Denim"),
-//         // P("Wide Denim", "photo-1542272604-787c3835535d", "Denim"),
-//       ],
-//       REPAIR: [
-//         // P("Straight Denim", "photo-1542272604-787c3835535d", "Denim"),
-//         // P("Wide Denim", "photo-1542272604-787c3835535d", "Denim"),
-//       ],
-//     },
-//   },
-//  AfterService: {
-//   label: "After Service",
-//    color:  "#f1a11f",
-//   subCategories: {
-//     Repair: [
-//       // P("Straight Denim", "photo-1542272604-787c3835535d", "Denim"),
-//       // P("Wide Denim", "photo-1542272604-787c3835535d", "Denim"),
-//     ],
-//     BuyBack: [
-//       // P("Straight Denim", "photo-1542272604-787c3835535d", "Denim"),
-//       // P("Wide Denim", "photo-1542272604-787c3835535d", "Denim"),
-//     ],
-//   },
-// },
-// };
-
 export const gallery = [
-  img("photo-1553062407-98eeb64c6a62"),
-  img("photo-1584917865442-de89df76afd3"),
-  img("photo-1548036328-c9fa89d128fa"),
-  img("photo-1594223274512-ad4803739b7c"),
+  img("/Defib-S8.jpg"),
+  img("/Cardiology/cpet_bike.jpg"),
+  img("/Cardiology/ec_3000_0.jpg"),
+  img("/ECG-1.jpg"),
 ];
 export const detail = (name, slug) => ({
   name: name || slug,
   slug,
-  brand: "MONO STUDIO",
-  price: "₩199,000",
+  brand: "GE",
+  price: "₩1,999,000",
   description:
-    "일상적인 움직임에 필요한 실용성과 정제된 실루엣을 함께 담은 제품입니다.",
+    "Three channel Digital Holter with short wire for 7 days recording",
   features: [
     "고급 소재 사용",
     "실용적인 디자인",
@@ -166,7 +96,7 @@ export const detail = (name, slug) => ({
 export const products = {
   subCategories: {
     Cardiology: [
-      P("Classic Tote", "photo-1553062407-98eeb64c6a62", "GE"),
+      P("CPET-400", "/images/Defib-S8.jpg", "GE"),
       P("Daily Tote", "photo-1594223274512-ad4803739b7c", "SIEMENS"),
       P("Soft Tote", "photo-1584917865442-de89df76afd3", "SAMSUNG"),
     ],

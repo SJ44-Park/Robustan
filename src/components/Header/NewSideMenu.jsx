@@ -78,7 +78,7 @@ export default function NewSideMenu({ open, onClose, onProductClick }) {
         <Typography
           sx={{ fontWeight: 700, letterSpacing: 2, color: "rgb(215, 36, 255)" }}
         >
-          ROBUSTAN
+          ROBUSTAN4
         </Typography>
         <IconButton onClick={onClose} aria-label="닫기">
           <Close />
