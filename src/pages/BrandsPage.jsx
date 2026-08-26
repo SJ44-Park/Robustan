@@ -60,7 +60,7 @@ export default function BrandsPage() {
 
       <Grid container >
         {brandList.map((brand) => (
-          <Grid item xs={10} sm={6} md={4} lg={3} xl={2} key={brand.filename}>
+          <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={brand.filename}>
             <Card
               elevation={0}
               sx={{
