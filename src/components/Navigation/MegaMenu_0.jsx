@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button,  Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 
 export default function MegaMenu({
@@ -8,33 +8,29 @@ export default function MegaMenu({
   products,
   // business,
   onProductClick,
-  onClose,
+  onClose
 }) {
-
-  console.log("MegaMenu category:", category);
-  console.log("MegaMenu subCategory:", subCategory);
-  console.log("MegaMenu products:", products);
-
-
   return (
     <Box sx={{ display: "block", borderTop: "1px solid #eee", p: 3 }}>
       <Grid container>
-        <Grid size={{ xs: 2, sm: 3 }}>
+        <Grid   size={{ xs: 2, sm: 3 }}>
           <Typography variant="overline">{category?.label}</Typography>
           <Typography>{subCategory}</Typography>
         </Grid>
-        <Grid size="grow">
+        <Grid   size="grow">
           <Grid container>
             {products.map((p) => (
-              <Grid xs={4} key={p.slug}>
+             
+              <Grid  xs={4} key={p.slug}>
+                
                 <Button
                   fullWidth
                   onClick={() => {
-                    // console.log("slug:", p.slug, "name:", p.name);
-                    console.log("p:", p);
+                    // console.log("slug:", p.slug, "name:", p.name); 
+                    console.log("p:", p); 
                     onProductClick(p, subCategory);
 
-                    onClose();
+                     onClose();
                   }}
                   sx={{ justifyContent: "flex-start" }}
                 >

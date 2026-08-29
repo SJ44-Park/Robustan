@@ -31,9 +31,9 @@ const DRAWER_WIDTH = 280;
 export default function NewSideMenu({ open, onClose, onProductClick }) {
   // 각 카테고리의 열림/닫힘 상태를 관리하는 State
   const [openCategories, setOpenCategories] = useState({
-    Cardiology: true, // 기본값으로 Car는 열려있도록 설정
+    cardiology: true, // 기본값으로 Car는 열려있도록 설정
     Emergency: false,
-    Uncategorized: false,
+    uncategorized: false,
   });
 
   // 클릭 시 열림/닫힘 토글 함수

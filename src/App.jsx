@@ -8,35 +8,43 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/FooterMain";
 
 import HomePage from "./pages/HomePage";
-import ProductPage from "./pages/ProductPage";
+import CompanyProfile from "./pages/CompanyProfile";
 
-import Product from "./pages/Product";
-import Contact from "./pages/Contact";
 
 import BranchOfficeMapPage from "./pages/BranchOfficeMapPage";
 import BrandsPage from "./pages/BrandsPage";
+import Contact from "./pages/Contact";
 
-
+import ProductPage from "./pages/ProductPage";
+import Product from "./pages/Product";
 import ProductDetailPage from "./pages/ProductDetailPage";
 
-import Services from "./pages/Services";
 import Supports from "./pages/Supports";
+
+import Services from "./pages/Services";
+import RepairPage from "./pages/RepairPage";
+import BuyBack from "./pages/BuyBack";
+
+
+import AfterServicePage from "./pages/AfterServicePage";
 
 import NpcVerification from "./pages/legal/NpcVerification";
 import PrivacyNotice from "./pages/legal/PrivacyNotice";
 import TermsOfUse from "./pages/legal/TermsOfUse";
 import CookiePolicy from "./pages/legal/CookiePolicy";
 
+
+import ScrollToTop from './components/ScrollToTop';  // 페이지 이동시 항상 맨 위로 가기
+
 export default function App() {
   const [selection, setSelection] = useState({ cat: null, sub: null });
   return (
     <BrowserRouter>
-
-{/* ------------- Header 컴포넌트  ----- */}
+     <ScrollToTop /> 
+      {/* ------------- Header 컴포넌트  ----- */}
       <Header onSelect={(cat, sub) => setSelection({ cat, sub })} />
-    
 
-{/* -------------route Pages 컴포넌트  ----- */}    
+      {/* -------------route Pages 컴포넌트  ----- */}
       <Routes>
         {/* ---------- product pages --------------- */}
 
@@ -50,28 +58,19 @@ export default function App() {
 
         <Route
           path="/about"
-          element={
-            <Page>
-              <Typography variant="h4">About Us (회사 소개)</Typography>
-            </Page>
-          }
+          element={<CompanyProfile/>      }
+          // element={
+          //   <Page>
+          //     <Typography variant="h4">About Us (회사 소개)</Typography>
+          //   </Page>
+          // }
         />
 
-        <Route
-          path="/map"
-          element={ <BranchOfficeMapPage/> }
-        />
+        <Route path="/map" element={<BranchOfficeMapPage />} />
 
-        <Route
-          path="/brands"
-          element={
-            <BrandsPage />
-          }
-        />
+        <Route path="/brands" element={<BrandsPage />} />
 
         <Route path="/contact" element={<Contact />} />
-
-
 
         {/* --------------------------- */}
         <Route path="/supports" element={<Supports />} />
@@ -108,7 +107,7 @@ export default function App() {
           }
         />
 
-        {/* ------------------------------- */}
+        {/* --------------services----------------- */}
         <Route path="/services/" element={<Services />} />
         <Route
           path="services/maintenance"
@@ -135,14 +134,27 @@ export default function App() {
           }
         />
 
+        {/* --------------after_service----------------- */}
+        <Route path="/after_service" element={<AfterServicePage />} />
+
+        <Route
+          path="/afterservices/repair"
+          element={<RepairPage /> }
+        />
+
+             <Route
+          path="/afterservices/buyback"
+          element={<BuyBack/>      }
+          
+        />
+
         {/* ================== footer 페이지들 =========================== */}
         <Route path="/npc-verification" element={<NpcVerification />} />
         <Route path="/privacy-notice" element={<PrivacyNotice />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
         <Route path="/cookie-policy" element={<CookiePolicy />} />
- 
- 
-         {/*---------- 404 페이지 (위에 정의되지 않은 모든  주소 처리) ----------*/}
+
+        {/*---------- 404 페이지 (위에 정의되지 않은 모든  주소 처리) ----------*/}
 
         <Route
           path="*"
@@ -152,13 +164,10 @@ export default function App() {
             </Page>
           }
         />
-
       </Routes>
 
-{/* ------------- Footer 컴포넌트  ----- */}
-      <Footer />  
-
-
+      {/* ------------- Footer 컴포넌트  ----- */}
+      <Footer />
     </BrowserRouter>
   );
 }

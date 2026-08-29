@@ -3,16 +3,16 @@ const productData = [
     productCode: "CPET-400",
     productName: "Custo Screen 400",
     manufacturer: "Bexen cardio",
-    category: "Cardiology",
+    category: "cardiology",
     price: 29000,
     stock: 120,
     rating: 4.7,
 
     images: [
-      "/images/Cardiology/cpet_bike.jpg",
-      "/images/Cardiology/ec_3000_0.jpg",
-      "/images/Cardiology/r100_aed.jpg",
-      "/images/Cardiology/spirovit_usb_0.jpg",
+      "/images/cardiology/cpet_bike.jpg",
+      "/images/cardiology/ec_3000_0.jpg",
+      "/images/cardiology/r100_aed.jpg",
+      "/images/cardiology/spirovit_usb_0.jpg",
     ],
 
     description: `
@@ -42,7 +42,7 @@ const productData = [
     productCode: "Defib-S8",
     productName: "ECG",
     manufacturer: "ARGUS",
-    category: " Cardiology",
+    category: "cardiology",
     price: 29000,
     stock: 120,
     rating: 4.7,
@@ -73,7 +73,7 @@ const productData = [
     productCode: "KN-001",
     productName: "오버핏 니트 스웨터",
     manufacturer: "Daily Mood",
-    category: "Tops",
+    category: "emergency",
     price: 49000,
     stock: 64,
     rating: 4.8,
@@ -111,7 +111,7 @@ const productData = [
     productCode: "PT-001",
     productName: "스트레이트 데님 팬츠",
     manufacturer: "Blue Archive",
-    category: "Bottoms",
+    category: "emergency",
     price: 59000,
     stock: 42,
     rating: 4.6,
@@ -149,7 +149,7 @@ const productData = [
     productCode: "JK-001",
     productName: "라이트 윈드브레이커",
     manufacturer: "Outdoor Lab",
-    category: "Outerwear",
+    category: "gastrology",
     price: 89000,
     stock: 28,
     rating: 4.9,
@@ -187,7 +187,7 @@ const productData = [
     productCode: "SH-001",
     productName: "데일리 캔버스 스니커즈",
     manufacturer: "Step Ground",
-    category: "Shoes",
+    category: "gastrology",
     price: 79000,
     stock: 35,
     rating: 4.5,
@@ -225,7 +225,45 @@ const productData = [
     productCode: "BG-001",
     productName: "미니 크로스바디 백",
     manufacturer: "Minimal Carry",
-    category: "Bags",
+    category: "gastrology",
+    price: 69000,
+    stock: 18,
+    rating: 4.4,
+
+    images: [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=900",
+      "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=900",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=900",
+    ],
+
+    description: `
+      휴대폰과 지갑 등 외출에 필요한 소지품을 간편하게 수납할 수 있는
+      미니 크로스바디 백입니다.
+
+      길이 조절이 가능한 스트랩을 사용했으며, 내부 포켓을 분리하여
+      작은 물건도 깔끔하게 정리할 수 있도록 구성했습니다. 가벼운 무게와
+      심플한 외관으로 데일리 아이템으로 활용하기 좋습니다.
+    `,
+
+    specifications: {
+      소재: "폴리에스터 100%",
+      색상: "블랙, 크림, 그린",
+      크기: "가로 20cm x 세로 15cm x 폭 6cm",
+      스트랩: "길이 조절 가능",
+      제조국: "베트남",
+      수납공간: "메인 수납공간 1개, 내부 포켓 2개",
+      무게: "약 260g",
+    },
+
+    relatedProductCodes: ["TS-001", "KN-001", "SH-001", "JK-001"],
+  },
+
+  {
+    productCode: "BG-001",
+    productName: "미니 크로스바디 백",
+    manufacturer: "Minimal Carry",
+    category: "nutrition_diabetic",
     price: 69000,
     stock: 18,
     rating: 4.4,

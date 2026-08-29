@@ -26,7 +26,6 @@ export default function MobileMenuBar({ open, onClose, onBussinessClick }) {
     toggle = (set, k) => set((x) => ({ ...x, [k]: !x[k] }));
 
   const menuKeys = Object.keys(business).filter((key) => key !== "Product");
-  const menuPaths = Object.keys(business).filter((key) => key !== "Product");
   const [openStates, setOpenStates] = useState({
     Support: false,
     Service: false,
@@ -39,9 +38,6 @@ export default function MobileMenuBar({ open, onClose, onBussinessClick }) {
       [key]: !prev[key],
     }));
   };
-
-console.log("MobileMenuBar menuKeys:", menuKeys);
-
 
   return (
     <Drawer
@@ -85,14 +81,10 @@ console.log("MobileMenuBar menuKeys:", menuKeys);
             </ListItemButton>
           ))}
         </List>
-   
-   
         <Divider />
-  
         <Typography sx={{ px: 2.5, pt: 2, color: "#a3a3a3", fontSize: 11 }}>
           BUSINESS
         </Typography>
-  
         <List sx={{ width: 250 }} component="nav">
           {menuKeys.map((key) => {
             const currentMenu = business[key];
@@ -101,20 +93,12 @@ console.log("MobileMenuBar menuKeys:", menuKeys);
             return (
               <React.Fragment key={key}>
                 {/* 대분류 클릭 버튼 (상단 서브헤더 대신 클릭 가능한 버튼으로 변경) */}
-                <ListItemButton 
-                onClick={() => handleToggle(key)}
-                      
-                  >
+                <ListItemButton onClick={() => handleToggle(key)}>
                   <ListItemText
                     primary={currentMenu.label}
                     primaryTypographyProps={{
                       style: { color: currentMenu.color, fontWeight: "bold" },
                     }}
-                    onClick={() => {
-                        
-                nav(currentMenu.path);
-                onClose();
-              }}
                   />
                   {/* 열림 상태에 따라 화살표 방향 변경 */}
                   {isOpen ? <ExpandLess /> : <ExpandMore />}

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"; // 1. Link 불러오기  // !!psj
 import SubCategoryBar from "../Navigation/SubCategoryBar";
 import MegaMenu from "../Navigation/MegaMenu";
 import MegaMenu2 from "../Navigation/MegaMenu2";
+import MegaMenu3 from "../Navigation/MegaMenu3";
 
 import robustanLogo from "/assets/logo.png";
 
@@ -33,11 +34,7 @@ export default function DesktopHeader({ onSelect, onProductClick }) {
   // const subCategoryKeys = current && Object.keys(current.subCategories || {});
   // const firstCategory = subCategoryKeys ? subCategoryKeys[0] : [];
 
-  const itemsP = sub ? products.subCategories[sub] : [];  // Megamenu 용
-
-
-
-
+  const itemsP = sub ? products.subCategories[sub] : []; // Megamenu 용
 
   // 또는
   // const itemCodes = [];
@@ -48,7 +45,7 @@ export default function DesktopHeader({ onSelect, onProductClick }) {
   //   itemNames.push(productName);
   // });
 
-// Megamenu2 용
+  // Megamenu2 용
   // 1. productCode만 추출하여 itemCodes 배열에 담기
   const itemCodes = productData.map((item) => item.productCode);
   // 2. productName만 추출하여 itemNames 배열에 담기
@@ -231,25 +228,28 @@ export default function DesktopHeader({ onSelect, onProductClick }) {
       </Toolbar>
       {current && (
         <SubCategoryBar
-          business={cat}
+          category={cat}
           barColor={barColor}
-          // subCategories={subCategoryKeys}
           subCategories={subCategories}
           activeSubCategory={sub}
           onSubCategoryClick={(s) => {
             console.log("SubCategoryBar click:", s);
-            console.log("activeSubCategory={sub}:", sub);
-            console.log("category={current}:", current);
-            console.log("subCategory={sub}:", sub);
-            console.log("business={items}:", items);
+            // console.log("activeSubCategory={sub}:", sub);
+            // console.log("category={current}:", current);
+            // console.log("subCategory={sub}:", sub);
+            // console.log("business={items}:", items);
             setSub(s);
-            onSelect(cat, s);
+
             setIsMegaOpen(true); // !!psj
+            onSelect(cat, s);
+
+            //  console.log("{cat}:", cat);
+            // console.log("{sub}:", sub);
           }}
         />
       )}
 
-      {sub && cat === "Product" && isMegaOpen && (
+      {/* {sub && cat === "Product" && isMegaOpen && (
         <MegaMenu
           category={current}
           subCategory={sub}
@@ -260,8 +260,6 @@ export default function DesktopHeader({ onSelect, onProductClick }) {
         />
       )}
 
-
-      {/* sub가 존재하고, 동시에 sub가 첫 번째 서브 카테고리일 때만 렌더링 */}
       {sub && cat === "Product" && isMegaOpen && (
         <MegaMenu2
           category={current}
@@ -272,7 +270,22 @@ export default function DesktopHeader({ onSelect, onProductClick }) {
           onProductClick={onProductClick}
           onClose={() => setIsMegaOpen(false)} // !!psj
         />
+      )} */}
+
+      {sub && cat === "Product" && isMegaOpen && (
+        <MegaMenu3
+          category={current}
+          subCategory={sub}
+          productData={productData}
+          //  products={itemsP}
+
+          // business={items}
+          onProductClick={onProductClick}
+          onClose={() => setIsMegaOpen(false)}
+        />
       )}
+
+
     </AppBar>
   );
 }

@@ -9,7 +9,7 @@ import { Box, Button, Container, Stack, Divider } from "@mui/material";
 // ];
 
 export default function SubCategoryBar({
-  category,
+  business,
   barColor,
   subCategories,
   activeSubCategory,
@@ -54,28 +54,25 @@ export default function SubCategoryBar({
         >
           {subCategories.map((sc) => (
             <Button
-              key={sc.label}
+              key={sc.path}
               color="inherit"
               onClick={() => {
-                console.log("onSubCategoryClick subCat:", sc.subCat);
-                console.log("onSubCategoryClick label:", sc.label);
-                console.log("onSubCategoryClick path:", sc.path);
-                onSubCategoryClick(sc.subCat); // 기존 부모 상태 변경 함수 호출
+                console.log("onSubCategoryClick:", sc.path);
+                onSubCategoryClick(sc.label); // 기존 부모 상태 변경 함수 호출
                 if (sc.path) nav(sc.path); // 3. 해당 path로 페이지 이동 추가
               }}
               sx={{
                 borderRadius: 0,
                 fontSize: 12,
                 // color: activeSubCategory === sc ? "#111" : "#777",
-                // fontWeight: 400,
-                color: activeSubCategory === sc.label ? "#ffffff" : "#e8e8e8",
+                color: "#ffffffff",
                 borderBottom:
-                  activeSubCategory === sc.label
+                  activeSubCategory === sc
                     ? "2px solid #e1e1e1ff"
                     : "2px solid transparent",
               }}
             >
-              {sc.label}
+               {sc.label}
             </Button>
           ))}
         </Stack>
