@@ -47,60 +47,87 @@ export const business = {
     path: "/products",
     subCategories: [
       {
+        subCat: "radiology",
+        label: "Radiology",
+        path: "/product/radiology",
+      },
+      {
         subCat: "cardiology",
         label: "Cardiology",
         path: "/product/cardiology",
       },
-      { subCat: "emergency", label: "Emergency", path: "/product/emergency" },
       {
-        subCat: "gastrology",
-        label: "Gastrology",
-        path: "/product/gastrology",
+        subCat: "anesthesiology",
+        label: "Anesthesiology",
+        path: "/product/anesthesiology",
       },
       {
-        subCat: "nutrition_diabetic",
-        label: "Nutrition & Diabetic",
-        path: "/product/nutrition-diabetic",
+        subCat: "pulmonology",
+        label: "Pulmonology",
+        path: "/product/pulmonology",
       },
+      {
+        subCat: "pediatric",
+        label: "Pediatric",
+        path: "/product/pediatric",
+      },
+      {
+        subCat: "er",
+        label: "ER",
+        path: "/product/er",
+      },
+      {
+        subCat: "or",
+        label: "OR",
+        path: "/product/or",
+      },
+      {
+        subCat: "icu",
+        label: "ICU",
+        path: "/product/icu",
+      },
+
+      // {
+      //   subCat: "nutrition_diabetic",
+      //   label: "Nutrition & Diabetic",
+      //   path: "/product/nutrition-diabetic",
+      // },
     ],
   },
   //
   Piping: {
     label: "Infra/Gas Pipe",
     color: "#22abea",
-    path: "/supports",
+    path: "/pipes",
     subCategories: [
-      { subCat: "new_op_room", label: "New_Op_Room", path: "/new-op-room" },
-      {
-        subCat: "upgrade_oldsystem",
-        label: "Upgrade_OldSystem",
-        path: "/upgrade-oldsystem",
-      },
-      { subCat: "consulting", label: "Consulting", path: "/consulting" },
-      {
-        subCat: "technical_support",
-        label: "Technical Support",
-        path: "/technical-support",
-      },
+      { subCat: "gas", label: "Gas", path: "/gas_pipe" },
+      { subCat: "air", label: "Air", path: "/air_pipe" },
+      { subCat: "kitchen", label: "Kitchen", path: "/kitchen_pipe" },
+      { subCat: "furniture", label: "Furniture", path: "/furniture_pipe" },
+       // {
+      //   subCat: "technical_support",
+      //   label: "Technical Support",
+      //   path: "/technical-support",
+      // },
     ],
   },
 
   Consult: {
     label: "Product Consulting",
     color: "#7b3886",
-    path: "/pipe",
+    path: "/consults",
     subCategories: [
       {
-        subCat: "maintenance",
-        label: "Maintenance",
-        path: "/services/maintenance",
+        subCat: "Consulting",
+        label: "Consulting",
+        path: "/consult/consulting",
       },
-      { subCat: "repair", label: "REPAIR", path: "/services/repair" },
-      {
-        subCat: "custom_service",
-        label: "Custom Service",
-        path: "/services/custom-service",
-      },
+      // { subCat: "repair", label: "REPAIR", path: "/services/repair" },
+      // {
+      //   subCat: "custom_service",
+      //   label: "Custom Service",
+      //   path: "/services/custom-service",
+      // },
     ],
   },
 
