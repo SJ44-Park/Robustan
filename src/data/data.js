@@ -65,8 +65,8 @@ export const business = {
     ],
   },
   //
-  Support: {
-    label: "Support",
+  Piping: {
+    label: "Infra/Gas Pipe",
     color: "#22abea",
     path: "/supports",
     subCategories: [
@@ -85,10 +85,10 @@ export const business = {
     ],
   },
 
-  Service: {
-    label: "Service",
+  Consult: {
+    label: "Product Consulting",
     color: "#7b3886",
-    path: "/services",
+    path: "/pipe",
     subCategories: [
       {
         subCat: "maintenance",
