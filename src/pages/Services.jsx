@@ -34,17 +34,22 @@ const theme = createTheme({
 // 제공 서비스 데이터
 const services = [
   {
-    title: "Internal Medicine",
+    title: "Gas Pipe",
     desc: "Expert medical care specialized in digestive, respiratory, and cardiovascular health.",
     icon: <LocalHospitalIcon color="primary" sx={{ fontSize: 40 }} />,
   },
   {
-    title: "Medical Service",
+    title: "Air Pipe",
     desc: "Comprehensive, high-precision health checkups using top-tier diagnostic equipment.",
     icon: <MedicalServicesIcon color="primary" sx={{ fontSize: 40 }} />,
   },
   {
-    title: "Children Care",
+    title: "Kitchen Pipe",
+    desc: "Fast recovery programs tailored 1:1 by our dedicated physical therapists.",
+    icon: <ChildCareIcon color="primary" sx={{ fontSize: 40 }} />,
+  },
+  {
+    title: "Furniture Pipe",
     desc: "Fast recovery programs tailored 1:1 by our dedicated physical therapists.",
     icon: <ChildCareIcon color="primary" sx={{ fontSize: 40 }} />,
   },
@@ -53,7 +58,7 @@ const services = [
 // [컴포넌트 2] 독립된 서비스 페이지 컴포넌트
 export default function Services() {
   return (
-    <Container sx={{ py: 8 }}>
+    <Container sx={{ py: 6 }}>
       <Typography
         variant="h4"
         align="center"
@@ -61,11 +66,11 @@ export default function Services() {
         fontWeight="bold"
         sx={{ mb: 6 }}
       >
-        Our Medical Services
+        Our Piping System
       </Typography>
       <Grid container spacing={4}>
         {services.map((s, idx) => (
-          <Grid item key={idx} xs={12} md={4}>
+          <Grid item key={idx} xs={12} md={6}>
             <Card
               sx={{
                 height: "100%",

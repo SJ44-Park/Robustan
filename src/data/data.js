@@ -100,10 +100,10 @@ export const business = {
     color: "#22abea",
     path: "/pipes",
     subCategories: [
-      { subCat: "gas", label: "Gas", path: "/gas_pipe" },
-      { subCat: "air", label: "Air", path: "/air_pipe" },
-      { subCat: "kitchen", label: "Kitchen", path: "/kitchen_pipe" },
-      { subCat: "furniture", label: "Furniture", path: "/furniture_pipe" },
+      { subCat: "gas", label: "Gas", path: "/piping/gas_pipe" },
+      { subCat: "air", label: "Air", path: "/piping/air_pipe" },
+      { subCat: "kitchen", label: "Kitchen", path: "/piping/kitchen_pipe" },
+      { subCat: "furniture", label: "Furniture", path: "/piping/furniture_pipe" },
        // {
       //   subCat: "technical_support",
       //   label: "Technical Support",

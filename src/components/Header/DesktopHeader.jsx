@@ -77,7 +77,13 @@ export default function DesktopHeader({ onSelect, onProductClick }) {
           justifyContent: "flex-end",
           // justifyContent: "space-between",
           alignItems: "center",
-          px: 6,
+          // px: 6,
+                  // 💡 반응형 좌우 패딩(px) 설정
+        px: { 
+          xs: 2,   // 모바일(기본)에서는 16px (2 * 8px)
+          md: 6,   // 태블릿 크기 이상에서는 48px (6 * 8px)
+          lg: 16   // 데스크톱(lg: 1200px 이상)에서는 80px (10 * 8px)
+        },
           borderBottom: "1px solid #d0dbffff",
           background: "#c5e2ffff", // !!psj
           color: "#787878ff", // !!psj
@@ -168,7 +174,12 @@ export default function DesktopHeader({ onSelect, onProductClick }) {
           justifyContent: "space-between",
           height: 80,
 
-          px: 6,
+          // px: 6,
+                  px: { 
+          xs: 2,   // 모바일(기본)에서는 16px (2 * 8px)
+          md: 6,   // 태블릿 크기 이상에서는 48px (6 * 8px)
+          lg: 16   // 데스크톱(lg: 1200px 이상)에서는 80px (10 * 8px)
+        },
         }}
       >
         <Box

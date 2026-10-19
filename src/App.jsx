@@ -1,3 +1,4 @@
+import './App.css'; // 여기에 여백 스타일을 작성합니다.
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Typography } from "@mui/material";
@@ -23,7 +24,7 @@ import Supports from "./pages/Supports";
 
 import Services from "./pages/Services";
 import RepairPage from "./pages/RepairPage";
-import BuyBack from "./pages/BuyBack";
+// import BuyBack from "./pages/BuyBack";
 
 
 import AfterServicePage from "./pages/AfterServicePage";
@@ -39,135 +40,116 @@ import ScrollToTop from './components/ScrollToTop';  // 페이지 이동시 항�
 export default function App() {
   const [selection, setSelection] = useState({ cat: null, sub: null });
   return (
-    <BrowserRouter>
-     <ScrollToTop /> 
-      {/* ------------- Header 컴포넌트  ----- */}
-      <Header onSelect={(cat, sub) => setSelection({ cat, sub })} />
+    // <div className="root-container">
+     
 
-      {/* -------------route Pages 컴포넌트  ----- */}
-      <Routes>
-        {/* ---------- product pages --------------- */}
+      <BrowserRouter>
+        <ScrollToTop />
+        {/* ------------- Header 컴포넌트  ----- */}
+        <Header onSelect={(cat, sub) => setSelection({ cat, sub })} />
 
-        <Route path="/product" element={<ProductPage />} />
-        <Route path="/product/:productSlug" element={<ProductPage />} />
-        <Route path="/products/:productCode" element={<ProductDetailPage />} />
+        {/* -------------route Pages 컴포넌트  ----- */}
+        <Routes>
+          {/* ---------- product pages --------------- */}
 
-        {/* ------------ robustan home--------------------------------- */}
+          <Route path="/product" element={<ProductPage />} />
+          <Route path="/product/:productSlug" element={<ProductPage />} />
+          <Route path="/products/:productCode" element={<ProductDetailPage />} />
 
-        <Route path="/" element={<HomePage />} />
+          {/* ------------ robustan home--------------------------------- */}
 
-        <Route
-          path="/about"
-          element={<CompanyProfile/>      }
+          <Route path="/" element={<HomePage />} />
+
+          <Route
+            path="/about"
+            element={<CompanyProfile />}
           // element={
           //   <Page>
           //     <Typography variant="h4">About Us (회사 소개)</Typography>
           //   </Page>
           // }
-        />
+          />
 
-        <Route path="/map" element={<BranchOfficeMapPage />} />
+          <Route path="/map" element={<BranchOfficeMapPage />} />
 
-        <Route path="/brands" element={<BrandsPage />} />
+          <Route path="/brands" element={<BrandsPage />} />
 
-        <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
 
-        {/* --------------------------- */}
-        <Route path="/supports" element={<Supports />} />
-        <Route
-          path="/new-op-room"
-          element={
-            <Page>
-              <Typography variant="h4">new-op-room Page</Typography>
-            </Page>
-          }
-        />
-        <Route
-          path="/upgrade-oldsystem"
-          element={
-            <Page>
-              <Typography variant="h4">upgrade-oldsystem Page</Typography>
-            </Page>
-          }
-        />
-        <Route
-          path="/consulting"
-          element={
-            <Page>
-              <Typography variant="h4">consulting Page</Typography>
-            </Page>
-          }
-        />
-        <Route
-          path="/technical-support"
-          element={
-            <Page>
-              <Typography variant="h4">technical-support Page</Typography>
-            </Page>
-          }
-        />
 
-        {/* --------------services----------------- */}
-        <Route path="/services/" element={<Services />} />
-        <Route
-          path="services/maintenance"
-          element={
-            <Page>
-              <Typography variant="h4">maintenance Page</Typography>
-            </Page>
-          }
-        />
-        <Route
-          path="/services/repair"
-          element={
-            <Page>
-              <Typography variant="h4">repair Page</Typography>
-            </Page>
-          }
-        />
-        <Route
-          path="/services/custom-service"
-          element={
-            <Page>
-              <Typography variant="h4">service Page</Typography>
-            </Page>
-          }
-        />
 
-        {/* --------------after_service----------------- */}
-        <Route path="/after_service" element={<AfterServicePage />} />
+          {/* --------------Piping----------------- */}
+          <Route path="/pipes/" element={<Services />} />
 
-        <Route
-          path="/afterservices/repair"
-          element={<RepairPage /> }
-        />
+          <Route
+            path="/piping/gas_pipe"
+            element={
+              <Page>
+                <Typography variant="h4">Gas Pipe Page</Typography>
+              </Page>
+            }
+          />
+          <Route
+            path="/piping/air_pipe"
+            element={
+              <Page>
+                <Typography variant="h4">AIR Pipe Page</Typography>
+              </Page>
+            }
+          />
+          <Route
+            path="/piping/kitchen_pipe"
+            element={
+              <Page>
+                <Typography variant="h4">kitchen_pipe Page</Typography>
+              </Page>
+            }
+          />
+          <Route
+            path="/piping/furniture_pipe"
+            element={
+              <Page>
+                <Typography variant="h4">furniture Piping Page</Typography>
+              </Page>
+            }
+          />
 
-             <Route
-          path="/afterservices/buyback"
-          element={<BuyBack/>      }
-          
-        />
+          {/* -----------Consulting---------------- */}
 
-        {/* ================== footer 페이지들 =========================== */}
-        <Route path="/npc-verification" element={<NpcVerification />} />
-        <Route path="/privacy-notice" element={<PrivacyNotice />} />
-        <Route path="/terms-of-use" element={<TermsOfUse />} />
-        <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route
+            path="/consults"
+            element={
+              <Page>
+                <Typography variant="h4">consulting Page</Typography>
+              </Page>
+            }
+          />
 
-        {/*---------- 404 페이지 (위에 정의되지 않은 모든  주소 처리) ----------*/}
 
-        <Route
-          path="*"
-          element={
-            <Page>
-              <Typography variant="h4">404 Page Not Found</Typography>
-            </Page>
-          }
-        />
-      </Routes>
 
-      {/* ------------- Footer 컴포넌트  ----- */}
-      <Footer />
-    </BrowserRouter>
+          {/* ================== footer 페이지들 =========================== */}
+          <Route path="/npc-verification" element={<NpcVerification />} />
+          <Route path="/privacy-notice" element={<PrivacyNotice />} />
+          <Route path="/terms-of-use" element={<TermsOfUse />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+
+          {/*---------- 404 페이지 (위에 정의되지 않은 모든  주소 처리) ----------*/}
+
+          <Route
+            path="*"
+            element={
+              <Page>
+                <Typography variant="h4">404 Page Not Found</Typography>
+              </Page>
+            }
+          />
+        </Routes>
+
+        {/* ------------- Footer 컴포넌트  ----- */}
+        <Footer />
+      </BrowserRouter>
+
+
+    // </div>
   );
 }

@@ -1,0 +1,15 @@
+/* .root-container {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .root-container {
+    padding-left: 40px;
+    padding-right: 40px;
+      max-width: 1440px; 
+    margin: 0 auto; 
+  }
+} */
