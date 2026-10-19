@@ -104,19 +104,19 @@ export const business = {
     ],
   },
 
-  AfterService: {
-    label: "After Service",
-    color: "#e00e97",
-    path: "/after_service",
-    subCategories: [
-      { subCat: "repair", 
-        label: "Repair", 
-        path: "/afterservices/repair" },
-      { subCat: "buy_back", 
-        label: "Buy Back", 
-        path: "/afterservices/buyback" },
-    ],
-  },
+  // AfterService: {
+  //   label: "After Service",
+  //   color: "#e00e97",
+  //   path: "/after_service",
+  //   subCategories: [
+  //     { subCat: "repair", 
+  //       label: "Repair", 
+  //       path: "/afterservices/repair" },
+  //     { subCat: "buy_back", 
+  //       label: "Buy Back", 
+  //       path: "/afterservices/buyback" },
+  //   ],
+  // },
 };
 
 export const gallery = [
