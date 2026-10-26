@@ -21,7 +21,7 @@ export default function Header({ onSelect }) {
     mobile = useMediaQuery(theme.breakpoints.down("md")),
     [open, setOpen] = useState(false),
 
-      [openMenu, setOpenMenu] = useState(false),
+    [openMenu, setOpenMenu] = useState(false),
 
     // go = (p ,subCategory) => {
     //   setOpen(false);
@@ -29,23 +29,23 @@ export default function Header({ onSelect }) {
     //   //리액트 라우터의 useLocation Hook을 사용하여 ProductPage()에서 데이터를 꺼낼 수 있습니다.
     // };
 
-    go = (p,subCat) => {
+    go = (p, subCat) => {
       console.log("p:", p);
       // console.log("Category=", Cat);
       console.log("subCategory=", subCat);
       setOpen(false);
       nav(`/product/${p.slug}`, {
-        state: { productName: p.name,  subCategory: subCat },
+        state: { productName: p.name, subCategory: subCat },
       }); // nav 기능으로 /product/제품페이지 이동하며,
       //리액트 라우터의 useLocation Hook을 사용하여 ProductPage()에서 데이터를 꺼낼 수 있습니다.
     };
 
-    if (mobile)
+  if (mobile)
     return (
       <>
         <AppBar
           // position="fixed"
-             position="sticky"
+          position="sticky"
           color="inherit"
           elevation={0}
           sx={{
@@ -60,34 +60,34 @@ export default function Header({ onSelect }) {
               <MenuIcon />
             </IconButton>
 
-             <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            gap: 3,
-            cursor: "pointer",
-          }}
-        >
-                     <img src={robustanLogo} width="120" alt="" />
-            <Typography
-              onClick={() => nav("/")}
-              sx={{ fontWeight: 700, letterSpacing: 3,   color: "#a3a3a3ff" }}
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 3,
+                cursor: "pointer",
+              }}
             >
-              ROBUSTAN
-            </Typography>
+              <img src={robustanLogo} width="120" alt="" />
+              <Typography
+                onClick={() => nav("/")}
+                sx={{ fontWeight: 700, letterSpacing: 3, color: "#a3a3a3ff" }}
+              >
+                ROBUSTAN
+              </Typography>
             </Box>
 
             <Box sx={{ width: 40 }} />
 
- {/* 오른쪽 메뉴bar 아이콘 */}
- <IconButton onClick={() => setOpenMenu(true)} aria-label="홈 메뉴">
-               <MoreVertIcon /> 
+            {/* 오른쪽 메뉴bar 아이콘 */}
+            <IconButton onClick={() => setOpenMenu(true)} aria-label="홈 메뉴">
+              <MoreVertIcon />
             </IconButton>
 
           </Toolbar>
         </AppBar>
 
- {/* 왼쪽 메뉴bar */}
+        {/* 왼쪽 메뉴bar */}
         <MobileNavigation
           open={open}
           onClose={() => setOpen(false)}
@@ -102,8 +102,8 @@ export default function Header({ onSelect }) {
         /> */}
 
 
- {/* 오른쪽 메뉴bar */}
-           <MobileMenuBar
+        {/* 오른쪽 메뉴bar */}
+        <MobileMenuBar
           open={openMenu}
           onClose={() => setOpenMenu(false)}
           onBussinessClick={go}
