@@ -175,12 +175,12 @@ export const detail = (name, slug) => ({
 
 export const products = {
   subCategories: {
-    cardiology: [
+    Radiology: [
       P("CPET-400", "/images/Defib-S8.jpg", "GE"),
       P("Daily Tote", "photo-1594223274512-ad4803739b7c", "SIEMENS"),
       P("Soft Tote", "photo-1584917865442-de89df76afd3", "SAMSUNG"),
     ],
-    emergency: [
+    Cardiology: [
       P("Mini Shoulder1", "photo-1584917865442-de89df76afd3", "Shoulder"),
       P("Classic Shoulder2", "photo-1548036328-c9fa89d128fa", "Shoulder"),
       P("Mini Shoulder3", "photo-1584917865442-de89df76afd3", "Shoulder"),
@@ -196,7 +196,7 @@ export const products = {
       P("Mini 12", "photo-1584917865442-de89df76afd3", "Shoulder"),
       P("14 Shoulder", "photo-1548036328-c9fa89d128fa", "Shoulder"),
     ],
-    gastrology: [
+    Anesthesiology: [
       P("Mini Shoulder", "photo-1584917865442-de89df76afd3", "Shoulder"),
       P("Classic 21", "photo-1548036328-c9fa89d128fa", "Shoulder"),
       P("Classic 22", "photo-1548036328-c9fa89d128fa", "Shoulder"),
@@ -205,11 +205,7 @@ export const products = {
       P("25 Shoulder", "photo-1584917865442-de89df76afd3", "Shoulder"),
       P("Classic 26", "photo-1548036328-c9fa89d128fa", "Shoulder"),
     ],
-    nutrition_diabetic: [
-      P("Mini Shoulder", "photo-1584917865442-de89df76afd3", "Shoulder"),
-      P("Classic Shoulder", "photo-1548036328-c9fa89d128fa", "Shoulder"),
-    ],
-    Operating_Room: [
+    Pulmonology: [
       P("Mini Shoulder", "photo-1584917865442-de89df76afd3", "Shoulder"),
       P("Classic Shoulder", "photo-1548036328-c9fa89d128fa", "Shoulder"),
     ],
@@ -217,17 +213,18 @@ export const products = {
       P("Mini Shoulder", "photo-1584917865442-de89df76afd3", "Shoulder"),
       P("Classic Shoulder", "photo-1548036328-c9fa89d128fa", "Shoulder"),
     ],
-    Radiology: [
+    ER: [
       P("Mini Shoulder", "photo-1584917865442-de89df76afd3", "Shoulder"),
       P("Classic Shoulder", "photo-1548036328-c9fa89d128fa", "Shoulder"),
     ],
-    Recovery_Room: [
+    OR: [
       P("Mini Shoulder", "photo-1584917865442-de89df76afd3", "Shoulder"),
       P("Classic Shoulder", "photo-1548036328-c9fa89d128fa", "Shoulder"),
     ],
-    Uncategorized: [
+    ICU: [
       P("Mini Shoulder", "photo-1584917865442-de89df76afd3", "Shoulder"),
       P("Classic Shoulder", "photo-1548036328-c9fa89d128fa", "Shoulder"),
     ],
+
   },
 };
